@@ -31,6 +31,9 @@
       font-family: 'REM', sans-serif;
       color: #8492a6;
       background-color: #EFF2F7;
+      background-image: url("https://raw.githubusercontent.com/luangelsdorf/emails/main/public/images/bg.png");
+      background-size: 100% 240px;
+      background-repeat: no-repeat;
     }
 
     .bar {
@@ -54,9 +57,12 @@
     }
 
     a img {
-      width: 1em;
-      height: auto;
-      /* transform: translateY(-1px); */
+      width: 13px;
+      height: 14px;
+    }
+
+    a {
+      text-decoration: none;
     }
 
     p {
@@ -118,29 +124,42 @@
     .section .footer {
       display: flex;
       align-items: center;
-      justify-content: center;
     }
 
     .section .footer p {
       font-size: 12px;
-      flex: 1;
       color: #8492a6;
+      width: auto;
     }
 
     .badge-btn {
       display: flex;
-      gap: 4px;
-      height: 24px;
       border-radius: 500px;
       color: white;
       background-color: #0086FF;
       font-size: 11px;
-      padding: 0 8px;
-      align-items: center;
+      line-height: normal;
+      padding: 5px 8px;
+      margin: auto;
+    }
+
+    .badge-btn img {
+      margin-right: 4px;
+    }
+
+    #payment-btn {
+      display: flex;
     }
 
     .btn-primary {
-      margin: 32px auto 0;
+      margin: auto;
+    }
+
+    #payment-btn img {
+      margin: auto;
+      margin-left: 8px;
+      height: 12px;
+      width: 12px;
     }
 
     .alert {
@@ -153,11 +172,13 @@
       border-radius: 4px;
       margin-top: 40px;
       margin-bottom: 24px;
+      text-align: center;
     }
 
     .alert strong,
     .alert span {
       color: #936F1D;
+      text-align: center;
     }
 
     .contact {
@@ -191,10 +212,9 @@
 
 <body>
   <div class="body">
-    <div class="bar"></div>
-
     <div class="header">
-      <img src="https://raw.githubusercontent.com/luangelsdorf/emails/main/public/images/e-mail-logotipo-10-anos-1.png" />
+      <img
+        src="https://raw.githubusercontent.com/luangelsdorf/emails/main/public/images/e-mail-logotipo-10-anos-1.png" />
     </div>
 
     <div class="main">
@@ -269,7 +289,7 @@
               </div>
             </div>
             <div class="footer">
-              <a class="btn btn-primary" href="https://google.com">
+              <a id="payment-btn" class="btn btn-primary" href="https://google.com">
                 <span>Realizar Pagamento</span>
                 <img src="https://raw.githubusercontent.com/luangelsdorf/emails/main/public/images/ext.png" alt="" />
               </a>
