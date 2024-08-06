@@ -24,25 +24,16 @@
       box-sizing: border-box;
     }
 
-
-    .color-primary {
-      color: #0086FF;
-    }
-
-    .color-dark {
-      color: #0E1530;
-    }
-
-    .color-secondary {
+    .dark {
       color: #3C4858;
     }
 
-    .color-light {
-      color: #8492a6;
+    .sky-blue {
+      color: #0086FF;
     }
 
-    .text-sm {
-      font-size: 12px;
+    .card-container {
+      width: 480px;
     }
 
     .body {
@@ -51,7 +42,7 @@
       padding-bottom: 40px;
       font-family: 'REM', sans-serif;
       color: #8492a6;
-      background-color: #EFF2F7;
+      background-color: #0e1530;
       background-image: url("https://raw.githubusercontent.com/luangelsdorf/emails/main/public/images/bg.png");
       background-size: 100% 240px;
       background-repeat: no-repeat;
@@ -78,8 +69,10 @@
     }
 
     a img {
+      display: inline-block;
       width: 13px;
       height: 14px;
+      margin-bottom: 2px;
     }
 
     a {
@@ -91,8 +84,6 @@
     }
 
     .card {
-      width: 480px;
-      margin: auto;
       margin-top: 40px;
       padding: 32px 40px 24px;
       border: 0;
@@ -108,8 +99,11 @@
       line-height: normal;
     }
 
+    .header {
+      text-align: center;
+    }
+
     .header img {
-      display: block;
       margin: auto;
       position: relative;
       z-index: 1;
@@ -142,10 +136,10 @@
       line-height: normal;
     }
 
-    .section .footer {
+    /* .section .footer {
       display: flex;
       align-items: center;
-    }
+    } */
 
     .section .footer p {
       font-size: 12px;
@@ -153,23 +147,19 @@
       width: auto;
     }
 
-    .badge-btn {
-      display: flex;
+    .address {
+      font-size: 12px;
+      line-height: 18px;
+    }
+
+    .badge {
+      font-weight: normal;
       border-radius: 500px;
-      color: white;
-      background-color: #0086FF;
-      font-size: 11px;
-      line-height: normal;
-      padding: 5px 8px;
-      margin: auto;
     }
 
-    .badge-btn img {
+    .badge img {
       margin-right: 4px;
-    }
-
-    #payment-btn {
-      display: flex;
+      margin-bottom: 2px;
     }
 
     .btn-primary {
@@ -187,7 +177,6 @@
       font-size: 12px;
       line-height: 18px;
       text-align: center;
-      padding: 8px 12px;
       border: 1px solid rgba(255, 231, 184, 0.50);
       background: #ffeecc80;
       border-radius: 4px;
@@ -202,31 +191,41 @@
       text-align: center;
     }
 
+    .reschedule {
+      font-size: 12px;
+    }
+
     .contact {
       font-size: 12px;
       text-align: center;
     }
 
-    .contact a {
+    a {
       color: #0086FF;
     }
 
     .footer-info {
-      width: 480px;
-      margin: auto;
-      margin-top: 24px;
-      padding: 32px 40px 16px;
+      padding: 0 50px;
+      margin-top: 32px;
+      margin-bottom: 24px;
       font-size: 12px;
       text-align: center;
     }
 
     .footer-info a {
-      color: #3C4858;
+      color: #EFF2F7;
     }
 
     .copyright {
       font-size: 12px;
       text-align: center;
+    }
+
+    @media screen and (max-width: 480px) {
+      .card-container {
+        width: auto;
+        padding: 0 24px !important;
+      }
     }
   </style>
 </head>
@@ -239,36 +238,36 @@
     </div>
 
     <div class="main">
-      <div class="container">
+      <div class="card-container m-auto ax-center">
         <div class="card">
           <h1 class="text-primary">Solange, seu agendamento foi confirmado com sucesso!</h1>
 
           <div class="section">
             <h2>Sobre o Agendamento:</h2>
-            <div class="details row">
-              <div class="col-4">
+            <div class="details row mb-4">
+              <div class="col-lg-4">
                 <h3>Data:</h3>
                 <p>06/01/2024</p>
               </div>
-              <div class="col-4">
+              <div class="col-lg-4">
                 <h3>Horário:</h3>
                 <p>10:00h</p>
               </div>
-              <div class="col-4">
+              <div class="col-lg-4">
                 <h3>Local:</h3>
                 <p>São Leopoldo</p>
               </div>
             </div>
-            <div class="text-sm">
-              <span class="color-dark">Endereço: </span>Av. Brasil, 3025 - Sl 504, Bairro Centro<br>
-              <span class="color-dark">Ponto de Referência: </span>Sala dentro da Galeria do Comércio.
+            <div class="address mb-4">
+              <div><span class="dark">Endereço: </span>Av. Brasil, 3025 - Sl 504, Bairro Centro.</div>
+              <div><span class="dark">Ponto de Referência: </span>Sala dentro da Galeria do Comércio.</div>
             </div>
-            <div class="footer mt-4 row">
-              <div class="col-auto">
+            <div class="footer row">
+              <div class="col-lg-8">
                 <p>Confira a localização do seu atendimento:</p>
               </div>
-              <div class="col-auto">
-                <a class="badge-btn" href="https://google.com">
+              <div class="col-lg-4">
+                <a class="badge badge-primary" href="https://google.com">
                   <img src="https://raw.githubusercontent.com/luangelsdorf/emails/main/public/images/pin.png" alt="" />
                   <span>Google Maps</span>
                 </a>
@@ -279,45 +278,49 @@
           <div class="section">
             <h2>Informações sobre o Certificado:</h2>
             <div class="details row">
-              <div class="col-4">
+              <div class="col-lg-4">
                 <h3>Produto:</h3>
                 <p>e-CNPJ A1</p>
               </div>
-              <div class="col-4">
+              <div class="col-lg-4">
                 <h3>Validade:</h3>
                 <p>1 Ano</p>
               </div>
-              <div class="col-4">
+              <div class="col-lg-4">
                 <h3>Investimento:</h3>
                 <p>R$ 195,00</p>
               </div>
             </div>
-            <div class="footer">
-              <p>Verifique a documentação necessária:</p>
-              <a class="badge-btn" href="https://google.com">
-                <img src="https://raw.githubusercontent.com/luangelsdorf/emails/main/public/images/doc.png" alt="" />
-                <span>Documentos</span>
-              </a>
+            <div class="footer row">
+              <div class="col-lg-8">
+                <p>Verifique a documentação necessária:</p>
+              </div>
+              <div class="col-lg-4">
+                <a class="badge badge-primary" href="https://google.com">
+                  <img src="https://raw.githubusercontent.com/luangelsdorf/emails/main/public/images/doc.png" alt="" />
+                  <span>Documentos</span>
+                </a>
+              </div>
             </div>
           </div>
 
           <div class="section">
             <h2>Dados de Pagamento:</h2>
             <div class="details row">
-              <div class="col-4">
+              <div class="col-lg-4">
                 <h3>Método:</h3>
                 <p>PIX</p>
               </div>
-              <div class="col-4">
+              <div class="col-lg-4">
                 <h3>Status:</h3>
                 <p>Pendente</p>
               </div>
-              <div class="col-4">
+              <div class="col-lg-4">
                 <h3>Válido por:</h3>
                 <p>30 minutos</p>
               </div>
             </div>
-            <div class="footer">
+            <div class="footer text-center">
               <a id="payment-btn" class="btn btn-primary" href="https://google.com">
                 <span>Realizar Pagamento</span>
                 <img src="https://raw.githubusercontent.com/luangelsdorf/emails/main/public/images/ext.png" alt="" />
@@ -325,13 +328,21 @@
             </div>
           </div>
 
-          <div class="alert">
-            <strong>Atenção!</strong>
-            <span>O atendimento só ocorre após o pagamento do produto.</span>
+          <div class="alert mb-4 text-center">
+            <strong class="text-xs">Atenção!</strong>
+            <span class="text-xs">O atendimento só ocorre após o pagamento do produto.</span>
           </div>
 
+          <div class="text-center reschedule">
+            Para reagendamento acesse <a href="certivale.com.br/reagendamento">certivale.com.br/reagendamento</a> e
+            utilize seu ID de atendimento: <span class="sky-blue">7a45a688-786e-456d-bb00-4a3e81475df4</span>
+          </div>
+
+          <hr>
+
           <div class="contact">
-            Ficou com alguma dúvida? Não deixei de nos contatar. <a href="tel:05130991866">(51) 3099.1866</a> - Segunda
+            Ficou com alguma dúvida? Não deixei de nos contatar.<br><a href="tel:05130991866">(51) 3099.1866</a> -
+            Segunda
             a sexta das 08h às 12h e das 13h às 17h.
           </div>
         </div>
